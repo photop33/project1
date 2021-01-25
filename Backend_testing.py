@@ -10,7 +10,7 @@ if res.ok:
 
 
 
-user_id=3#str(input("enter id"))
+user_id='3'#str(input("enter id"))
 res = requests.get('http://127.0.0.1:5000/user/'+ user_id  +'')
 if res.ok:
     print(res.json())
