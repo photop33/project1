@@ -1,6 +1,6 @@
 import requests
 import pymysql
-user_id= 1#str(input("enter id"))
+user_id= '1'#str(input("enter id"))
 user_name= 'lior'#str(input("enter user name "))
 
 
