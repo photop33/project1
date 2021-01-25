@@ -1,7 +1,7 @@
 import requests
 import pymysql
-# user_id=str(input("enter id"))
-# user_name=str(input("enter user name "))
+ user_id= 1#str(input("enter id"))
+user_name= 'lior''#str(input("enter user name "))
 
 
 res = requests.post('http://127.0.0.1:5000/user/'+ user_id +'', json={"user_name": ""+ user_name + ""})
@@ -10,7 +10,7 @@ if res.ok:
 
 
 
-# user_id=str(input("enter id"))
+ user_id=3#str(input("enter id"))
 res = requests.get('http://127.0.0.1:5000/user/'+ user_id  +'')
 if res.ok:
     print(res.json())
