@@ -17,7 +17,7 @@ if res.ok:
 
 conn = pymysql.connect(host='remotemysql.com', port=3306, user='Q2PbjAC1nT', passwd='WRYn22HLYY', db='Q2PbjAC1nT')
 cursor = conn.cursor()
-cursor.execute("SELECT name FROM Q2PbjAC1nT.users;")
+cursor.execute("SELECT * FROM Q2PbjAC1nT.users;")
 for row in cursor:
     if user_name == row[0]:
         print('An ',row[0],' exists in the system')
