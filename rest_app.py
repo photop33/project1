@@ -71,7 +71,6 @@ def user(user_id):
             except:
                 return {"status": "error", "reason": "no such id"}, 500
 
-        elif
 
 
 app.run(host='127.0.0.1', debug=True, port=5000)
