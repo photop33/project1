@@ -8,4 +8,3 @@ def user_name(a):
     x=driver.find_element_by_xpath('/html/body/pre')
     print(x.text)
 
-user_name(input("enter id"))
