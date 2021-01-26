@@ -2,9 +2,17 @@ import requests
 try:
     res = requests.get('http://127.0.0.1:5000/stop_server')
     if res.ok:
-        print(res.json()
-    res = requests.get('http://127.0.0.1:5001/stop_server')
-    if res.ok:
-        print(res.json()
+        print(res.json())
+        print("success 5000")
 except:
-    print("Fail")
+    print("Stop-server 5000")
+
+
+try:
+    pic = requests.get('http://127.0.0.1:5001/stop_server')
+    if pic.ok:
+        print(pic.json())
+        print("Stop-server 5001")
+
+except:
+    print("Fail 5001")
