@@ -31,7 +31,6 @@ pipeline {
                         sh 'python 1.py'
                     } else {
                             bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\web_app.py'
-                            bat 'EXIT   python3'
                     }
                 }
             }
