@@ -1,7 +1,8 @@
 from flask import Flask, request
 import json
 import datetime
-
+import os
+import signal
 import pymysql
 
 app = Flask(__name__)
@@ -72,6 +73,13 @@ def user(user_id):
             except:
                 return {"status": "error", "reason": "no such id"}, 500
 
+
+
+
+@app.route('/stop_server')
+def stop_server():
+    os.kill(os.getpid(), signal.CTRL_C_EVENT)
+    return 'Server stopped'
 
 
 app.run(host='127.0.0.1', debug=True, port=5000)
