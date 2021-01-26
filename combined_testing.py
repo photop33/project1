@@ -3,8 +3,11 @@ import requests
 import pymysql
 
 try:
+<<<<<<< HEAD
     user_id="1"#str(input("enter id"))
     user_name="lior"#str(input("enter user name "))
+
+>>>>>>> 9edfaba54ce01444ae2ab4d227e492595cfb1a93
 
 
     res = requests.post('http://127.0.0.1:5000/user/'+ user_id +'', json={"user_name": ""+ user_name + ""})
