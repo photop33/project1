@@ -1,0 +1,55 @@
+pipeline {
+    agent any
+    stages {
+        stage('checkout') {
+            steps {
+                script {
+                    properties([pipelineTriggers([pollSCM('* * * * *')])])
+                }
+                git 'https://github.com/Dgotlieb/JenkinsTest.git'
+            }
+        }
+        stage('run python') {
+            steps {
+                script {
+                    if (Boolean.valueOf(env.UNIX)) {
+                        sh 'python 1.py'
+                    } else {
+                        bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\rest_app.py'
+                        bat 'echo hello'
+                    }
+                }
+            }
+        }
+    
+
+                       
+        stage('run python1') {
+            steps {
+                script {
+                    if (Boolean.valueOf(env.UNIX)) {
+                        sh 'python 1.py'
+                    } else {
+                            bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\web_app.py'
+                            bat 'EXIT   python3'
+                    }
+                }
+            }
+        }
+    }
+}
+        //     }
+          // stage('run python2') {
+        //     steps {
+        //         script {
+        //             if (Boolean.valueOf(env.UNIX)) {
+        //                 sh 'python 1.py'
+        //             } else {
+        //                     bat 'cd C:\\Users\\l1313\\PycharmProjects\\project1'
+        //                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\test-rest_app.py'
+        //                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\Backend_testing.py'
+        //                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\frontend_testing.py'
+        //                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\combined_testing.py'
+        //                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\clean_environment.py'
+        //             }
+        //         }
