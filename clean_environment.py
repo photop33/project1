@@ -12,7 +12,6 @@ try:
     pic = requests.get('http://127.0.0.1:5001/stop_server')
     if pic.ok:
         print(pic.json())
-        print("Stop-server 5001")
 
 except:
-    print("Fail 5001")
+    print("Stop-server 5001")
