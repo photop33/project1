@@ -22,6 +22,8 @@ pipeline {
             steps {
                 script {
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\rest_app.py'
+                    bat 'echo success'
+
                 }
             }
         }
@@ -29,6 +31,7 @@ pipeline {
             steps {
                 script {
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\test-rest_app.py'
+                    bat 'echo success'
                 }
             }
         }
@@ -36,6 +39,7 @@ pipeline {
             steps {
                 script {
                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\Backend_testing.py'
+                    bat 'echo success'
                 }
             }
         }
@@ -43,6 +47,7 @@ pipeline {
             steps {
                 script {
                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\frontend_testing.py'
+                    bat 'echo success'
                 }
             }
         }
@@ -50,6 +55,7 @@ pipeline {
             steps {
                 script {
                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\combined_testing.py'
+                    bat 'echo success'
                 }
             }
         }
