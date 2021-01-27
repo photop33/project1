@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\web_app.py'
-                    bat 'echp success'
+                    bat 'echo success'
                 }
             }
         }
