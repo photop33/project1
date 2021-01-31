@@ -17,11 +17,9 @@ pipeline {
                     git 'https://github.com/photop33/project1.git'
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\web_app.py'
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\rest_app.py'
-                    bat 'echo success web_app and rest_app'
                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\Backend_testing.py'
-                    bat 'echo Success Backend_testing-1 ' 
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\clean_environment.py'
-                    bat 'echo Success clean_environment ' 
+                    bat 'echo Success Backend_testing-1 ' 
 
                 }
             }
@@ -36,11 +34,9 @@ pipeline {
                     git 'https://github.com/photop33/project1.git'
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\web_app.py'
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\rest_app.py'
-                    bat 'echo success web_app and rest_app'
                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\frontend_testing.py'
-                    bat 'echo Success frontend_testing-2'  
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\clean_environment.py'
-                    bat 'echo Success clean_environment ' 
+                    bat 'echo Success frontend_testing-2' 
 
 
                 }
@@ -56,11 +52,9 @@ pipeline {
                     git 'https://github.com/photop33/project1.git'
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\web_app.py'
                     bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\rest_app.py'
-                    bat 'echo success web_app and rest_app'
                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\combined_testing.py'
-                    bat 'echo Success combined_testing-3'              
                     bat 'python3 C:\\Users\\l1313\\PycharmProjects\\project1\\clean_environment.py'
-                    bat 'echo Success clean_environment ' 
+                    bat 'echo Success frontend_testing-3 ' 
 
                 }
             }

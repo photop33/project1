@@ -4,7 +4,7 @@ try:
     if res.ok:
         print(res.json())
 except:
-    print("Stop-server 5000")
+    print("Stop-server 5000 Fail")
 
 
 try:
@@ -13,5 +13,5 @@ try:
         print(pic.json())
 
 except:
-    print("Stop-server 5001")
+    print("Stop-server 5001 Fail")
 
