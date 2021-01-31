@@ -4,7 +4,7 @@ pipeline {
         stage('checkout') {
             steps {
                 script {
-                    properties([pipelineTriggers([pollSCM('*/30 * * * *')])])
+                    perties([pipelineTriggers([pollSCM('*/30 * * * *')])])
                     properties([buildDiscarder(logRotator(daysToKeepStr: '5', numToKeepStr: '20')),])
                 }
                 git 'https://github.com/photop33/project1.git'
@@ -13,7 +13,7 @@ pipeline {
         stage('web_app') {
             steps {
                 script {
-                    bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\lior.py'
+                    bat 'start/min python3 C:\\Users\\l1313\\PycharmProjects\\project1\\web_app.py'
                     bat 'echo success web_app'
                 }
             }
