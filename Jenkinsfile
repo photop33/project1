@@ -93,19 +93,5 @@ pipeline {
     }  
 }
     
-node {
-  properties(
-    [
-        parameters(
-            [
-                string(defaultValue: 'swisalior', name: 'Username'),
-                print ( "DEBUG: parameter foo = ${env.Username}")
 
-            
-
-    ]
-    )    
-  ]
-  )
-}
 
