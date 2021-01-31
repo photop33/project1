@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    }
-      git 'https://github.com/photop33/project1.git'
-    }
     parameters {
         choice(
             choices: ['Backend_testing-1' , 'frontend_testing-2','combined_testing-3',],
