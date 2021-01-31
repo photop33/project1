@@ -11,7 +11,6 @@ def get_user_name(user_id):
                 conn = pymysql.connect(host='remotemysql.com', port=3306, user='Q2PbjAC1nT', passwd='WRYn22HLYY',db='Q2PbjAC1nT')
                 cursor = conn.cursor()
                 cursor.execute("SELECT ID FROM Q2PbjAC1nT.users;")
-                user_name = cursor.execute("SELECT * FROM Q2PbjAC1nT.users;")
                 for row in cursor:
                     cc=int(user_id)
                     dd=int(row[0])
@@ -20,8 +19,7 @@ def get_user_name(user_id):
                        break
                 cursor.close()
                 conn.close()
-                return "<H1 id='user'>" + row + "</H1>"
-                return {"status": "ok", 'user name': users[user_id]}, 200
+                return "<H1 id='user'>" + row + "</H1>",{"status": "ok", 'user name': users[user_id]}, 200
 
             except:
                     user_id=str(user_id)
