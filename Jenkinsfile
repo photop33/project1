@@ -4,7 +4,7 @@ pipeline {
         stage('checkout') {
             steps {
                 script {
-                    perties([pipelineTriggers([pollSCM('*/30 * * * *')])])
+                    properties([pipelineTriggers([pollSCM('*/30 * * * *')])])
                     properties([buildDiscarder(logRotator(daysToKeepStr: '5', numToKeepStr: '20')),])
                 }
                 git 'https://github.com/photop33/project1.git'
