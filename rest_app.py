@@ -8,10 +8,10 @@ users = {}
 
 def user(user_id):
         if request.method == 'POST':
+            from db_connector import insert_user
             try:
-                from db_connector import insert_user
                 user_name = insert_user(user_id)
-                return {'user id': user_id , 'user added': user_name, 'status': 'ok'}, 200 # status code
+                return {'user id': user_id , 'user added':  user_name, 'status': 'ok'}, 200 # status code
             except:
                 return {"status": "error", "reason": "idal ready exists"} ,500
 
